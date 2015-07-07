@@ -1,0 +1,17 @@
+!!! 5
+%head
+  %title= page_title(yield(:title))
+  = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+  = stylesheet_link_tag 'dist/semantic.min.css', media: 'all'
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = javascript_include_tag 'dist/semantic.min.js', 'data-turbolinks-track' => true
+  = javascript_include_tag 'app.js'
+  = csrf_meta_tags
+
+%body
+  -#=render 'layouts/navigation/base_navigation'
+  =render 'layouts/navigation/base_sidebar_navigation'
+  .ui.pusher
+    =render 'layouts/navigation/base_application_navigation'
+    = yield
+    =render 'layouts/footers/base_footer'
