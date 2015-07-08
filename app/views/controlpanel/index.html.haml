@@ -1,6 +1,26 @@
 .ui.vertical.strip.segment
   .ui.middle.aligned.stackable.grid.container
     .row
-      .eight.wide.column
-        %h3.ui.header
-          Welcome
+      .sixteen.wide.column
+        %h2.ui.header.top-margin
+          %i.settings.icon
+          .content
+            Kontrollpanel
+            .sub.header Välkommen till kontrollpanelen. Välj ett val!
+
+    .row
+      .four.wide.column
+        = link_to edit_user_registration_path(current_user) do
+          %h4.ui.center.aligned.icon.header
+            %i.setting.icon
+            .content
+              Inställningar
+              .sub.header Hantera dina inställningar
+
+      .four.wide.column
+        = link_to edit_account_path(current_user) do
+          %h4.ui.center.aligned.icon.header
+            %i.user.icon
+            .content
+              Profil
+              .sub.header Hantera din profil
