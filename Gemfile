@@ -29,6 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml'
 gem 'haml-rails'
 gem "mandrill-api"
+gem 'devise'
 
 # Pagination
 gem 'will_paginate', '~> 3.0.6'

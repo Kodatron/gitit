@@ -1,0 +1,45 @@
+.main.ui.page.grid
+  .column
+    .ui.grid
+      .sixteen.wide.column
+        .ui.small.breadcrumb
+          = link_to "Home", "/", class: "section"
+          %i.chevron.right.icon.divider
+          = link_to "Your Account", edit_user_registration_path(@user), class: "section"
+        %h2.ui.header
+          %i.user.icon
+          .content
+            Your Account
+            .sub.header Edit your account
+
+      .sixteen.wide.column
+        .ui.form.error
+          - if @user.errors.any?
+            .ui.error.message
+              .header
+                Something went wrong!
+              - @user.errors.each do |name, message|
+                %p
+                  #{name} #{message}
+          = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+
+            .field
+              = f.label :email
+              = f.email_field :email, autofocus: true
+
+              = "Currently waiting confirmation for: #{resource.unconfirmed_email}" if devise_mapping.confirmable? && resource.pending_reconfirmation?
+
+            .field
+              = f.label :Password
+              = f.password_field :password, autocomplete: "false"
+
+            .field
+              = f.label :Confirm_Password
+              = f.password_field :password_confirmation, autocomplete: "false"
+
+            .field
+              = f.label :Current_Password
+              = f.password_field :current_password, autocomplete: "false"
+
+            .actions
+              = f.submit "Update Settings", class: "ui positive button"

@@ -10,8 +10,9 @@
 
 %body
   -#=render 'layouts/navigation/base_navigation'
-  =render 'layouts/navigation/auth/base_sidebar_navigation'
+  =render 'layouts/navigation/base_sidebar_navigation'
+
   .ui.pusher
-    =render 'layouts/navigation/auth/base_application_navigation'
+    =render 'layouts/navigation/base_application_navigation'
     = yield
     =render 'layouts/footers/base_footer'
