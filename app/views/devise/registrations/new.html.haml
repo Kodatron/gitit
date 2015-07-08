@@ -1,0 +1,33 @@
+.column
+  .ui.grid
+    .sixteen.wide.column
+      %h2.ui.header
+        %i.add.user.icon
+        .content
+          Skapa användare
+          .sub.header Fyll i formulären nedan för att skapa en ny användare
+
+    .sixteen.wide.column
+      .ui.form.error
+        - if @user.errors.any?
+          .ui.error.message
+            .header
+              Något gick snett!
+            - @user.errors.each do |name, message|
+              %p= message
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+
+          .field
+            = f.label :email
+            = f.email_field :email
+
+          .field
+            = f.label :lösenord
+            = f.password_field :password, autocomplete: "off"
+
+          .field
+            = f.label "Bekräfta lösenord"
+            = f.password_field :password_confirmation, autocomplete: "off"
+
+          .actions
+            = f.submit "Skapa användare", class: "ui positive button"
