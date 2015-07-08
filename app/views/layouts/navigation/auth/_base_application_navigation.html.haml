@@ -1,9 +1,9 @@
-.ui.inverted.vertical.center.aligned.segment
+.ui.vertical.segment
   .ui.container
     .ui.large.inverted.secondary.pointing.menu
       %a.toc.item
         %i.sidebar.icon
-      = link_to 'Home', '/', class: 'item'
+      = link_to 'Auth', '/', class: 'item'
       -if user_signed_in?
         = link_to "Log out", destroy_user_session_path, method: :delete, class: 'item right'
         = link_to current_user.email, edit_user_registration_path, class: 'item right'

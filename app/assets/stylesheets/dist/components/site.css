@@ -14,7 +14,7 @@
              Page
 *******************************/
 
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
+@import url('https://fonts.googleapis.com/css?family=Lato:200,700,400italic,700italic&subset=latin');
 html,
 body {
   height: 100%;
@@ -103,11 +103,11 @@ p:last-child {
 --------------------*/
 
 a {
-  color: #4183c4;
+  color: #22a7f0;
   text-decoration: none;
 }
 a:hover {
-  color: #1e70bf;
+  color: #0096e9;
   text-decoration: none;
 }
 

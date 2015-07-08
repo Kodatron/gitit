@@ -2977,7 +2977,7 @@
 
 .ui.primary.buttons .button,
 .ui.primary.button {
-  background-color: #2185d0;
+  background-color: #22a7f0;
   color: #ffffff;
   text-shadow: none;
   background-image: none;
@@ -2987,25 +2987,25 @@
 }
 .ui.primary.buttons .button:hover,
 .ui.primary.button:hover {
-  background-color: #1678c2;
+  background-color: #059ff4;
   color: #ffffff;
   text-shadow: none;
 }
 .ui.primary.buttons .button:focus,
 .ui.primary.button:focus {
-  background-color: #0d71bb;
+  background-color: #0097e9;
   color: #ffffff;
   text-shadow: none;
 }
 .ui.primary.buttons .button:active,
 .ui.primary.button:active {
-  background-color: #1a69a4;
+  background-color: #0e8cd1;
   color: #ffffff;
   text-shadow: none;
 }
 .ui.primary.buttons .active.button,
 .ui.primary.active.button {
-  background-color: #1279c6;
+  background-color: #00a0f9;
   color: #ffffff;
   text-shadow: none;
 }
@@ -3016,7 +3016,7 @@
 
 .ui.secondary.buttons .button,
 .ui.secondary.button {
-  background-color: #1b1c1d;
+  background-color: #f62459;
   color: #ffffff;
   text-shadow: none;
   background-image: none;
@@ -3026,25 +3026,25 @@
 }
 .ui.secondary.buttons .button:hover,
 .ui.secondary.button:hover {
-  background-color: #27292a;
+  background-color: #ff3568;
   color: #ffffff;
   text-shadow: none;
 }
 .ui.secondary.buttons .button:focus,
 .ui.secondary.button:focus {
-  background-color: #2e3032;
+  background-color: #ff4473;
   color: #ffffff;
   text-shadow: none;
 }
 .ui.secondary.buttons .button:active,
 .ui.secondary.button:active {
-  background-color: #343637;
+  background-color: #f8557e;
   color: #ffffff;
   text-shadow: none;
 }
 .ui.secondary.buttons .active.button,
 .ui.secondary.active.button {
-  background-color: #27292a;
+  background-color: #ff3568;
   color: #ffffff;
   text-shadow: none;
 }
