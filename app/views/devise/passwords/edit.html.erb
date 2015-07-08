@@ -1,0 +1,25 @@
+.column
+  .ui.grid
+    .sixteen.wide.column
+      %h2.ui.header
+        %i.add.user.icon
+        .content
+          Change your password
+          .sub.header Fill in the form to change your password
+
+    .sixteen.wide.column
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+
+        .field
+          = f.label :password, "New password"
+            - if @minimum_password_length
+              %em
+                = @minimum_password_length
+          = f.password_field :password, autofocus: true, autocomplete: "off"
+
+        .field
+          = f.label :password_confirmation, "Confirm new password"
+          = f.password_field : password_confirmation, autocomplete: "off"
+
+        .actions
+          = f.submit "Change my password", class: "ui positive button"
