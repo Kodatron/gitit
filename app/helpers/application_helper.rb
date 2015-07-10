@@ -7,4 +7,9 @@ module ApplicationHelper
       base + " | " + page_title
     end
   end
+
+  def get_full_name(account)
+    return account.first_name + " " + account.last_name
+  end
+  
 end

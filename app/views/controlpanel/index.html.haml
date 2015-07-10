@@ -1,14 +1,6 @@
 .ui.vertical.strip.segment
   .ui.middle.aligned.stackable.grid.container
     .row
-      .sixteen.wide.column
-        %h2.ui.header.top-margin
-          %i.settings.icon
-          .content
-            Kontrollpanel
-            .sub.header Välkommen till kontrollpanelen. Välj ett val!
-
-    .row
       .four.wide.column
         = link_to edit_user_registration_path(current_user) do
           %h4.ui.center.aligned.icon.header
@@ -24,3 +16,19 @@
             .content
               Profil
               .sub.header Hantera din profil
+
+      .four.wide.column
+        = link_to account_path(current_user) do
+          %h4.ui.center.aligned.icon.header
+            %i.spy.icon
+            .content
+              Min Sida
+              .sub.header Visa din profil
+
+      .four.wide.column
+        = link_to "#" do
+          %h4.ui.center.aligned.icon.header
+            %i.game.icon
+            .content
+              Mina Projekt
+              .sub.header Visa dina projekt
