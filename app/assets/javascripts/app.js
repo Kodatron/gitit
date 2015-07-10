@@ -21,3 +21,6 @@ $(document)
 
     })
   ;
+$('.ui.dropdown')
+  .dropdown()
+;
