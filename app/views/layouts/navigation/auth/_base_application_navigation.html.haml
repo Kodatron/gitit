@@ -9,7 +9,7 @@
       .right.menu
       -if user_signed_in?
         .ui.dropdown.item
-            = link_to current_user.email, edit_user_registration_path
+            = link_to current_user.email, edit_user_registration_path(current_user)
             %i.dropdown.icon
             .menu
               .item
