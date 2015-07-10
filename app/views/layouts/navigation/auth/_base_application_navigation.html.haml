@@ -9,7 +9,7 @@
       .right.menu
       -if user_signed_in?
         .ui.dropdown.item
-          = get_full_name(current_user.account)
+          = current_user.account.first_name
           %i.dropdown.icon
           .menu
             .item
