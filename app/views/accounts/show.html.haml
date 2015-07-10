@@ -1,6 +1,6 @@
-%p#notice= notice
-
-
-= link_to 'Edit', edit_account_path(@account)
-\|
-= link_to 'Back', accounts_path
+.column
+  .ui.segment
+    .ui.two.column.grid
+      .column
+        .ui.card
+          = image_tag @account.image, alt: "", class: "ui big image visible content"

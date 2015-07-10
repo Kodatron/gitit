@@ -31,6 +31,9 @@ gem 'haml-rails'
 gem "mandrill-api"
 gem 'devise'
 
+# Image uploader
+gem 'carrierwave'
+
 # Pagination
 gem 'will_paginate', '~> 3.0.6'
 
