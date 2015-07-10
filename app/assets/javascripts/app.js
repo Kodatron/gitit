@@ -22,5 +22,4 @@ $(document)
     })
   ;
 $('.ui.dropdown')
-  .dropdown()
-;
+  .dropdown();

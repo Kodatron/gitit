@@ -9,9 +9,11 @@
       .right.menu
       -if user_signed_in?
         .ui.dropdown.item
-          = link_to current_user.email, edit_user_registration_path(current_user)
+          = get_full_name(current_user.account)
           %i.dropdown.icon
           .menu
+            .item
+              = link_to "Profil", edit_user_registration_path(current_user)
             .item
               = link_to "Administration", "/admin"
             .item
