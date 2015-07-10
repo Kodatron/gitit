@@ -1,12 +1,21 @@
 .ui.vertical.segment
   .ui.container
-    .ui.large.inverted.secondary.pointing.menu
-      %a.toc.item
-        %i.sidebar.icon
-      = link_to 'Auth', '/', class: 'item'
+    .ui.large.secondary.menu
+      .ui.header.item
+        = link_to 'YoungCreatives', '/'
+      %a.item Min profil
+      %a.item Annonser
+      %a.item Företag
+      .right.menu
       -if user_signed_in?
-        = link_to "Log out", destroy_user_session_path, method: :delete, class: 'item right'
-        = link_to current_user.account.first_name, account_path(current_user), class: 'item right'
+        .item
+        = link_to "Log out", destroy_user_session_path, method: :delete, class: "ui small primary button"
+        .item
+        = link_to current_user.email, edit_user_registration_path, class: "ui small primary button"
+        .item
+        = link_to "", "/admin", class: "ui small secondary button"
       -else
-        = link_to "Log in", new_user_session_path, class: 'item right'
-        = link_to 'Sign up', new_user_registration_path, class: 'item right'
+        .item
+          = link_to "Logga in", new_user_session_path, class: 'ui small primary button'
+        .item
+          = link_to "Registrera", new_user_registration_path, class: 'ui small secondary button'

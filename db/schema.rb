@@ -18,9 +18,6 @@ ActiveRecord::Schema.define(version: 20150708142546) do
     t.string   "first_name", limit: 255
     t.string   "last_name",  limit: 255
     t.string   "image",      limit: 255
-    t.string   "adress",     limit: 255
-    t.string   "phone",      limit: 255
-    t.string   "website",    limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end

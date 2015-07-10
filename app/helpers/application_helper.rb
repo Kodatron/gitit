@@ -1,6 +1,6 @@
 module ApplicationHelper
   def page_title(base = '')
-    page_title = "Gitit, Git it your way!"
+    page_title = "Young Creatives At Your Service!"
     if base.empty?
       page_title
     else
