@@ -5,9 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :account
-  after_create :build_account
+  after_create :build_account, :send_registration_mail
 
    def build_account
      Account.create(user: self) # Associations must be defined correctly for this syntax, avoids using ID's directly.
    end
+
+   def send_registration_mail
+     UserMailer.registration_mail(self).deliver_now
+   end
+
 end
