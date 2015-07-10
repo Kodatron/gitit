@@ -1,26 +1,9 @@
-.ui.inverted.vertical.masthead.center.aligned.segment
+.ui.inverted.vertical.center.aligned.segment
   .ui.container
     .ui.large.inverted.secondary.pointing.menu
       %a.toc.item
         %i.sidebar.icon
       = link_to 'Home', '/', class: 'item'
-      %a.item About
-      %a.item Pricing
-      %a.item Contact
-<<<<<<< HEAD
-      .right.item
-        %a.ui.small.inverted.button Log in
-        %a.ui.small.inverted.button Sign up
-
-  .ui.text.container
-    %h1.ui.inverted.header
-      A tool for every developer
-    %h2
-      Follow the progress of every aspect of your projects
-    .ui.huge.primary.button
-      Get started
-      %i.right.arrow.icon
-=======
       -if user_signed_in?
         = link_to "Log out", destroy_user_session_path, method: :delete, class: 'item right'
         = link_to current_user.email, edit_user_registration_path, class: 'item right'
@@ -28,4 +11,3 @@
       -else
         = link_to "Log in", new_user_session_path, class: 'item right'
         = link_to 'Sign up', new_user_registration_path, class: 'item right'
->>>>>>> acad4d643abb3dde34fe7a5d3c06fa3e270f09ed

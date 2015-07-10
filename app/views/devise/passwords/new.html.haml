@@ -1,0 +1,18 @@
+.column
+  .ui.grid
+    .sixteen.wide.column
+      %h2.ui.header
+        %i.add.user.icon
+        .content
+          Forgot your password
+          .sub.header Fill in the form to reset your password
+
+    .sixteen.wide.column
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+
+        .field
+          = f.label :email
+          = f.email_field :email
+
+        .actions
+          = f.submit "Send med reset password instructions", class: "ui positive button"
